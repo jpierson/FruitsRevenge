@@ -37,6 +37,30 @@
                 <action behavior="Pin" id="1" name="Unpin" sid="4204825327580277" type="Banana" />
             </actions>
         </event-block>
+        <event-block sid="1321357912770269">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5215245749823873" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="1391518551805209" type="RollyPully">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4616089328222871">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5771265507773558" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="8312034934748269" type="RollyPully">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="1530240943271916">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="2215825840616724" type="System">
@@ -77,8 +101,58 @@
                 <action id="-3" name="Create object" sid="9995033844859193" type="System">
                     <param id="0" name="Object to create">NingaWithSword</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">5</param>
-                    <param id="3" name="Y">5124</param>
+                    <param id="2" name="X">5115</param>
+                    <param id="3" name="Y">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="9128866087261521">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6753047518998763" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="1951463091235547" type="NingaWithSword">
+                    <param id="0" name="X">RollyPully.X</param>
+                    <param id="1" name="Y">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4740612008987305">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8907390881100179" type="NingaWithSword">
+                    <param id="0" name="Object">RollyPully</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="1301027936498545" type="RollyPully">
+                    <param id="0" name="Instance variable">Hearts</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7420284861878475">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9609952481240774" type="RollyPully">
+                    <param id="0" name="Instance variable">Hearts</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9406574043193551" type="RollyPully" />
+            </actions>
+        </event-block>
+        <event-block sid="4836324128546422">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8548649765262154" type="Heart">
+                    <param id="0" name="Instance variable">HeartNumber</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">RollyPully.Hearts</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="7117239907060461" type="Heart">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
