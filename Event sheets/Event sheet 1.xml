@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="4303803267044486">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4332568925989523" type="Keyboard">
+                    <param id="0" name="Key">66 (B)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7233523551653786" type="RollyPully">
+                    <param id="0" name="Object">Banana</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="174485089425026" type="Banana">
+                    <param id="0" name="Pin to">RollyPully</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1694736574376344">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4517533977310481" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="4041605753446892" type="Banana">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="2592295234587724" type="Banana">
+                    <param id="0" name="Angle">-40</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="4204825327580277" type="Banana" />
+            </actions>
+        </event-block>
+        <event-block sid="1530240943271916">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2215825840616724" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="9132215663323246" type="Banana">
+                    <param id="0" name="Degrees">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8622956045912993">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="962185947254075" type="Banana" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1081245699635374" type="Banana" />
+            </actions>
+        </event-block>
+        <event-block sid="5618500640342193">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3582124005257448" type="NingaWithSword">
+                    <param id="0" name="Object">Banana</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9117823208947184" type="NingaWithSword" />
+            </actions>
+        </event-block>
+        <event-block sid="75282779381245">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7047319002815144" type="System">
+                    <param id="0" name="Interval (seconds)">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="9995033844859193" type="System">
+                    <param id="0" name="Object to create">NingaWithSword</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">5</param>
+                    <param id="3" name="Y">5124</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
